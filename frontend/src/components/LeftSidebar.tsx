@@ -8,6 +8,8 @@ import {
   CssBaseline,
   Paper,
 } from "@mui/material";
+import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
+import { TreeItem } from "@mui/x-tree-view/TreeItem";
 
 const leftDrawerWidth = 240;
 const rightDrawerWidth = 240;
@@ -33,7 +35,16 @@ export default function LeftSidebar() {
     >
       <Box sx={{ p: 2 }}>
         <Typography variant="h6">Left Sidebar</Typography>
-        <Typography variant="body2">body2</Typography>
+        <SimpleTreeView>
+          <TreeItem itemId="grid" label="Data Grid">
+            <TreeItem itemId="grid-1" label="grid-1" />
+            <TreeItem itemId="grid-2" label="grid-2" />
+          </TreeItem>
+          <TreeItem itemId="sample" label="Data Sample">
+            <TreeItem itemId="sample-1" label="sample-1" />
+            <TreeItem itemId="sample-2" label="sample-2" />
+          </TreeItem>
+        </SimpleTreeView>
       </Box>
     </Drawer>
   );
